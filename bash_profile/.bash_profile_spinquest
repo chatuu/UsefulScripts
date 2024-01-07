@@ -1,0 +1,64 @@
+
+# Setting PATH for Python 3.10
+# The original version is saved in .bash_profile.pysave
+export KRB5_CONFIG=~/krb5.conf
+
+
+#---------------------------------------------------------------------------------------------------------------------
+#                alias for NOvA commands
+#-------------------------------------------------------------------------------------------------------------------
+
+alias key='/usr/bin/kinit --password-file=/Users/ckuruppu/pwd ckuruppu@FNAL.GOV'
+
+
+#-------------------------------------------------------------------------------------------------------------------
+#                alias for General Usage
+#-------------------------------------------------------------------------------------------------------------------
+
+#alias ll='ls -larth --color=auto'
+alias ll='ls -larth --color=auto'
+alias ld='ls -d */'
+alias makeTar2='tar -czvf files.tar.gz $1'
+alias vi='vim -p'
+alias deleteScreen='screen -X -S $1 kill'
+alias ..='cd ../'
+alias 2..='cd ../../'
+alias 3..='cd ../../../'
+alias 4..='cd ../../../../'
+alias 5..='cd ../../../../../'
+alias 6..='cd ../../../../../../'
+alias sbash='source ~/.bash_profile'
+alias openBash='vi ~/.bash_profile'
+alias gonzo='ssh -p45122 chatuu@gonzo.physics.sc.edu'
+
+#-------------------------------------------------------------------------------------------------------------------
+#                Color Scheme
+#-------------------------------------------------------------------------------------------------------------------
+
+export CLICOLOR=1
+hostName=$(hostname)
+export LSCOLORS=GxFxCxDxBxegedabagaced
+function prompt {
+        local BLACK="\[\033[0;30m\]"
+                local BLACKBOLD="\[\033[1;30m\]"
+                local RED="\[\033[0;31m\]"
+                local REDBOLD="\[\033[1;31m\]"
+                local GREEN="\[\033[0;32m\]"
+                local GREENBOLD="\[\033[1;32m\]"
+                local YELLOW="\[\033[0;33m\]"
+                local YELLOWBOLD="\[\033[1;33m\]"
+                local BLUE="\[\033[0;34m\]"
+                local BLUEBOLD="\[\033[1;34m\]"
+                local PURPLE="\[\033[0;35m\]"
+                local PURPLEBOLD="\[\033[1;35m\]"
+                local CYAN="\[\033[0;36m\]"
+                local CYANBOLD="\[\033[1;36m\]"
+                local WHITE="\[\033[0;37m\]"
+                local WHITEBOLD="\[\033[1;37m\]"
+                local RESETCOLOR="\[\e[00m\]"
+                export PS1="\n$REDBOLD\u $PURPLEBOLD@ $WHITEBOLD$hostName : $GREENBOLD\w $RESETCOLOR$GREENBOLD\$(git branch 2> /dev/null) \$(date)  \n $BLUEBOLD[\#] → $RESETCOLOR"
+        export PS2=" | → $RESETCOLOR"
+}
+prompt
+
+
