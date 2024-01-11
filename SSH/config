@@ -1,0 +1,70 @@
+Host spin01
+     HostName spinquestgpvm01.fnal.gov
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+     User ckuruppu
+     LocalForward 5923 localhost:5923
+     ServerAliveInterval 60
+
+
+Host nova15
+     HostName novagpvm15.fnal.gov
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+     User ckuruppu
+     LocalForward 5923 localhost:5923
+     ServerAliveInterval 60
+
+Host nova10
+     HostName novagpvm10.fnal.gov
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+     User ckuruppu
+     LocalForward 5925 localhost:5925
+     ServerAliveInterval 60
+
+Host nova7
+     HostName novagpvm10.fnal.gov
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+     User ckuruppu
+     LocalForward 5927 localhost:5927
+     ServerAliveInterval 60
+
+
+Host *.fnal.gov
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+
+Host nova07
+     HostName novagpvm07.fnal.gov
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+     User ckuruppu
+     LocalForward 5901 localhost:5923
+     TCPKeepAlive yes
+     ServerAliveInterval 120
+
+Host server
+     HostName ckuruppu-server
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+     User ckuruppu
+     TCPKeepAlive yes
+     ServerAliveInterval 120
+
+
